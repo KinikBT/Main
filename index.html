@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kinik Behavioural Tech | Singapore Behavioural Wellness Venture</title>
+  <meta name="description" content="Kinik Behavioural Tech is a Singapore-based behavioural technology and communication wellness research initiative developing evidence-based tools grounded in CBT, EFT, and behavioural science.">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            sandstone: {
+              50: '#FAF8F5',
+              100: '#F3EFEA',
+              200: '#E5E0D8',
+              300: '#D4CDC2',
+            },
+            slate: {
+              800: '#1E293B',
+              900: '#0F172A',
+            },
+            sage: {
+              50: '#F2F7F4',
+              100: '#DCE9E1',
+              700: '#2C4C3B',
+              800: '#1F362A',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-sage-100 selection:text-sage-800">
+
+  <!-- Top Navigation -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-sandstone-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Finalized KINIK BEHAVIOURAL TECH Logo (Inline SVG with optional logo.png support) -->
+      <!-- Note: To use your downloaded image file instead, save it as 'logo.png' in your GitHub root folder and swap the inline SVG below with <img src="logo.png" alt="Kinik Behavioural Tech" class="h-12 w-auto"> -->
+      <a href="#" class="flex items-center group focus:outline-none" aria-label="Kinik Behavioural Tech Home">
+        <svg class="h-11 sm:h-12 w-auto" viewBox="0 0 320 92" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="headerLogoTitle">
+          <title id="headerLogoTitle">Kinik Behavioural Tech Logo</title>
+          <defs>
+            <filter id="kinikShadow" x="-10%" y="-10%" width="120%" height="125%">
+              <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#0F172A" flood-opacity="0.16"/>
+            </filter>
+          </defs>
+          <!-- Wordmark: KINIK (Dark Forest Green #2C4C3B with Mirrored K's & Solid Clean N) -->
+          <g filter="url(#kinikShadow)" stroke="#2C4C3B" stroke-width="5.2" stroke-linecap="square" stroke-linejoin="miter">
+            <!-- Left 'K' (Facing Right) -->
+            <line x1="34" y1="12" x2="34" y2="54"/>
+            <polyline points="62,12 37,33 63,54"/>
+            <!-- First 'I' -->
+            <line x1="87" y1="12" x2="87" y2="54"/>
+            <!-- Solid Clean 'N' (No Split Line) -->
+            <polyline points="113,54 113,12 147,54 147,12"/>
+            <!-- Second 'I' -->
+            <line x1="173" y1="12" x2="173" y2="54"/>
+            <!-- Right 'K' (Horizontally Mirrored Facing Left) -->
+            <line x1="227" y1="12" x2="227" y2="54"/>
+            <polyline points="199,12 224,33 198,54"/>
+          </g>
+          <!-- Subtitle: BEHAVIOURAL TECH (Tracked Uppercase Dark Slate #4A4F55) -->
+          <text x="130.5" y="77" text-anchor="middle" fill="#4A4F55" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11.2" font-weight="600" letter-spacing="4.6">BEHAVIOURAL TECH</text>
+        </svg>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
+        <a href="#about" class="hover:text-sage-700 transition-colors">About</a>
+        <a href="#focus" class="hover:text-sage-700 transition-colors">Focus Areas</a>
+        <a href="#careers" class="hover:text-sage-700 transition-colors">Careers</a>
+        <a href="#contact" class="px-4 py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800 transition-colors">
+          Contact Us
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuBtn" type="button" aria-label="Toggle Menu" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-sandstone-100 focus:outline-none">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-sandstone-200 bg-sandstone-50 px-4 py-4 space-y-3">
+      <a href="#about" class="block py-1.5 text-sm font-medium text-slate-700 hover:text-sage-700">About</a>
+      <a href="#focus" class="block py-1.5 text-sm font-medium text-slate-700 hover:text-sage-700">Focus Areas</a>
+      <a href="#careers" class="block py-1.5 text-sm font-medium text-slate-700 hover:text-sage-700">Careers</a>
+      <a href="#contact" class="block w-full text-center py-2.5 rounded-lg bg-slate-900 text-white text-sm font-medium">Contact Us</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-16 pb-20 sm:pt-24 sm:pb-28 px-4 sm:px-6 lg:px-8 border-b border-sandstone-200">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sandstone-100 border border-sandstone-200 text-xs font-medium text-sage-800 mb-6">
+          <span class="w-1.5 h-1.5 rounded-full bg-sage-700"></span>
+          Singapore Behavioural Tech Research Initiative · Early-Stage R&amp;D
+        </div>
+        
+        <h1 class="font-display text-3xl sm:text-5xl font-bold tracking-tight text-slate-900 leading-tight mb-6">
+          Bridging the gap between clinical insight and everyday communication.
+        </h1>
+        
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto mb-9">
+          Kinik Behavioural Tech is a Singapore-based behavioural technology and communication wellness research initiative developing evidence-based tools grounded in CBT, EFT, and behavioural science to support interpersonal communication and self-regulation between coaching and counselling sessions.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5">
+          <a href="#careers" class="w-full sm:w-auto px-6 py-3 rounded-lg bg-sage-700 text-white font-medium text-sm hover:bg-sage-800 transition-colors shadow-sm">
+            View Open Roles
+          </a>
+          <a href="#contact" class="w-full sm:w-auto px-6 py-3 rounded-lg bg-white border border-sandstone-200 text-slate-700 font-medium text-sm hover:bg-sandstone-100 transition-colors">
+            Partner &amp; Clinical Inquiries
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Core Principles -->
+    <section id="about" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-b border-sandstone-200">
+      <div class="max-w-5xl mx-auto">
+        <div class="max-w-2xl mb-12">
+          <p class="text-xs font-semibold uppercase tracking-wider text-sage-700 mb-2">About the Venture</p>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
+            Translating behavioural science into practical daily support.
+          </h2>
+          <p class="text-slate-600 leading-relaxed">
+            Kinik Behavioural Tech is an early-stage Singapore research and product venture. We collaborate with registered counsellors, psychologists, and executive coaches to design ethical, consent-driven tools that reinforce healthy communication habits outside the consultation room.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Principle 1 -->
+          <div class="bg-white p-6 rounded-xl border border-sandstone-200">
+            <div class="w-10 h-10 rounded-lg bg-sage-50 border border-sage-100 flex items-center justify-center text-sage-700 mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+              </svg>
+            </div>
+            <h3 class="font-display font-semibold text-base text-slate-900 mb-2">Evidence-Based Frameworks</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Grounded in established clinical and coaching science, including Cognitive Behavioural Therapy (CBT), Emotionally Focused Therapy (EFT), and interpersonal communication research.
+            </p>
+          </div>
+
+          <!-- Principle 2 -->
+          <div class="bg-white p-6 rounded-xl border border-sandstone-200">
+            <div class="w-10 h-10 rounded-lg bg-sage-50 border border-sage-100 flex items-center justify-center text-sage-700 mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+              </svg>
+            </div>
+            <h3 class="font-display font-semibold text-base text-slate-900 mb-2">Privacy-by-Design &amp; PDPA Compliance</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Engineered from day one around strict Singapore Personal Data Protection Act (PDPA) alignment, ephemeral processing, and zero invasive audio retention.
+            </p>
+          </div>
+
+          <!-- Principle 3 -->
+          <div class="bg-white p-6 rounded-xl border border-sandstone-200">
+            <div class="w-10 h-10 rounded-lg bg-sage-50 border border-sage-100 flex items-center justify-center text-sage-700 mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/>
+              </svg>
+            </div>
+            <h3 class="font-display font-semibold text-base text-slate-900 mb-2">Human-Centered Wellness</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Positioned strictly as a non-medical behavioural wellness tool designed to complement—never replace—licensed counsellors, mediators, and executive coaches.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Current Focus Areas -->
+    <section id="focus" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-sandstone-100/60 border-b border-sandstone-200">
+      <div class="max-w-5xl mx-auto">
+        <div class="max-w-2xl mb-12">
+          <p class="text-xs font-semibold uppercase tracking-wider text-sage-700 mb-2">Current R&amp;D Focus</p>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mb-3">
+            Three pillars of our early-stage research.
+          </h2>
+          <p class="text-slate-600">
+            Our current discovery phase focuses on validating behavioural workflows with practitioners and consenting pilot participants across Singapore.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Principle 1 -->
+          <div class="bg-white p-6 rounded-xl border border-sandstone-200">
+            <div class="w-10 h-10 rounded-lg bg-sage-50 border border-sage-100 flex items-center justify-center text-sage-700 mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+              </svg>
+            </div>
+            <h3 class="font-display font-semibold text-base text-slate-900 mb-2">Evidence-Based Foundation</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Informed by established therapeutic and coaching frameworks, including Cognitive Behavioral Therapy (CBT), Emotionally Focused Therapy (EFT), and interpersonal communication science.
+            </p>
+          </div>
+
+          <!-- Principle 2 -->
+          <div class="bg-white p-6 rounded-xl border border-sandstone-200">
+            <div class="w-10 h-10 rounded-lg bg-sage-50 border border-sage-100 flex items-center justify-center text-sage-700 mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+              </svg>
+            </div>
+            <h3 class="font-display font-semibold text-base text-slate-900 mb-2">Privacy &amp; Consent by Design</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Engineered from day one around Singapore PDPA standards, explicit user opt-in controls, and strict data minimization principles.
+            </p>
+          </div>
+
+          <!-- Principle 3 -->
+          <div class="bg-white p-6 rounded-xl border border-sandstone-200">
+            <div class="w-10 h-10 rounded-lg bg-sage-50 border border-sage-100 flex items-center justify-center text-sage-700 mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/>
+              </svg>
+            </div>
+            <h3 class="font-display font-semibold text-base text-slate-900 mb-2">Human-Centered Wellness</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Positioned strictly as a non-medical behavioral wellness tool designed to support—never replace—licensed therapists, mediators, and coaches.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Current Focus Areas -->
+    <section id="focus" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-sandstone-100/60 border-b border-sandstone-200">
+      <div class="max-w-5xl mx-auto">
+        <div class="max-w-2xl mb-12">
+          <p class="text-xs font-semibold uppercase tracking-wider text-sage-700 mb-2">Current R&amp;D Focus</p>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mb-3">
+            Three pillars of our early-stage research.
+          </h2>
+          <p class="text-slate-600">
+            Our current discovery phase focuses on validating behavioral workflows with practitioners and consenting pilot participants across Singapore.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Focus 1 -->
+          <div class="bg-sandstone-50 p-7 rounded-xl border border-sandstone-200 flex flex-col justify-between">
+            <div>
+              <span class="inline-block text-xs font-semibold text-sage-700 bg-sage-50 border border-sage-100 px-2.5 py-1 rounded-md mb-4">01 · Individual</span>
+              <h3 class="font-display font-bold text-lg text-slate-900 mb-2.5">Individual Self-Regulation</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Supporting self-aware professionals, parents, and clients in recognizing stress-induced communication habits and building calmer, more intentional responses.
+              </p>
+            </div>
+          </div>
+
+          <!-- Focus 2 -->
+          <div class="bg-sandstone-50 p-7 rounded-xl border border-sandstone-200 flex flex-col justify-between">
+            <div>
+              <span class="inline-block text-xs font-semibold text-sage-700 bg-sage-50 border border-sage-100 px-2.5 py-1 rounded-md mb-4">02 · Interpersonal</span>
+              <h3 class="font-display font-bold text-lg text-slate-900 mb-2.5">Couples &amp; Family Alignment</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Helping mutually consenting partners practice constructive de-escalation and repair habits between counseling or mediation sessions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Focus 3 -->
+          <div class="bg-sandstone-50 p-7 rounded-xl border border-sandstone-200 flex flex-col justify-between">
+            <div>
+              <span class="inline-block text-xs font-semibold text-sage-700 bg-sage-50 border border-sage-100 px-2.5 py-1 rounded-md mb-4">03 · Clinical Validation</span>
+              <h3 class="font-display font-bold text-lg text-slate-900 mb-2.5">Practitioner Collaboration</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Partnering with licensed therapists, dispute mediators, and leadership coaches in Singapore to co-design ethical, low-friction behavioural frameworks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Open Roles / Careers Section (NUS TalentConnect Friendly) -->
+    <section id="careers" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-b border-sandstone-200">
+      <div class="max-w-5xl mx-auto">
+        <div class="max-w-2xl mb-10">
+          <p class="text-xs font-semibold uppercase tracking-wider text-sage-700 mb-2">Opportunities</p>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mb-3">
+            Join our early-stage research team.
+          </h2>
+          <p class="text-slate-600">
+            We welcome inquiries from Singapore university students interested in applied psychology, behavioural science, and ethical health-tech research.
+          </p>
+        </div>
+
+        <!-- Featured Role Card -->
+        <div class="bg-white rounded-2xl border border-sandstone-200 p-6 sm:p-8 shadow-sm">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 pb-6 border-b border-sandstone-200">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-2.5">
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-sage-50 text-sage-800 border border-sage-100">
+                  Part-Time / Student Research
+                </span>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-sandstone-100 text-slate-700">
+                  Singapore (Flexible / Hybrid)
+                </span>
+              </div>
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-slate-900">
+                Part-Time Research &amp; Outreach Assistant (Psychology / Behavioural Science)
+              </h3>
+            </div>
+            
+            <div class="flex-shrink-0">
+              <button type="button" onclick="openRoleModal()" class="w-full sm:w-auto px-5 py-2.5 rounded-lg bg-sage-700 text-white font-medium text-sm hover:bg-sage-800 transition-colors cursor-pointer">
+                Express Interest
+              </button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+            <div class="md:col-span-2 space-y-3 text-sm text-slate-600 leading-relaxed">
+              <p class="font-medium text-slate-900">Role Overview &amp; Responsibilities</p>
+              <p>
+                Work directly with the founding team to assist with practitioner discovery outreach across Singapore clinics and coaching practices, organize structured qualitative research notes, and support early user-experience studies.
+              </p>
+              <ul class="space-y-1.5 pt-1 text-slate-600">
+                <li class="flex items-start gap-2">
+                  <span class="text-sage-700 font-bold">·</span>
+                  <span>Ideal for Year 2–4 undergraduates in Psychology, Social Work, Communications, or Business.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sage-700 font-bold">·</span>
+                  <span>Strong written communication, attention to detail, and familiarity with foundational therapeutic concepts (e.g., CBT, active listening).</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-sandstone-50 rounded-xl p-5 border border-sandstone-200 space-y-3 text-sm">
+              <div>
+                <p class="text-xs text-slate-500 uppercase tracking-wider font-medium">Commitment</p>
+                <p class="font-semibold text-slate-900 mt-0.5">10 – 15 hours / week (Flexible / Hybrid)</p>
+              </div>
+              <div>
+                <p class="text-xs text-slate-500 uppercase tracking-wider font-medium">Compensation</p>
+                <p class="font-semibold text-slate-900 mt-0.5">S$18 – S$22 / hour</p>
+              </div>
+              <div>
+                <p class="text-xs text-slate-500 uppercase tracking-wider font-medium">Location</p>
+                <p class="font-semibold text-slate-900 mt-0.5">Singapore (Hybrid / Remote-Flexible)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Inquiries Section -->
+    <section id="contact" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-10">
+        <!-- Left Info Column -->
+        <div class="lg:col-span-2 space-y-5">
+          <p class="text-xs font-semibold uppercase tracking-wider text-sage-700">Get in Touch</p>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900">
+            Connect with our founding team.
+          </h2>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Whether you are a licensed therapist, executive coach, university career office, or student applicant, we welcome your message.
+          </p>
+
+          <div class="pt-2 space-y-3 text-sm">
+            <div class="flex items-center gap-3 text-slate-700">
+              <svg class="w-4 h-4 text-sage-700 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
+              </svg>
+              <span>Singapore (Republic of Singapore)</span>
+            </div>
+
+            <div class="flex items-center gap-3 text-slate-700">
+              <svg class="w-4 h-4 text-sage-700 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+              </svg>
+              <a id="contactEmailText" href="mailto:kinikbt@proton.me" class="font-medium text-sage-700 hover:underline">kinikbt@proton.me</a>
+              <button type="button" onclick="copyEmail()" class="text-xs px-2 py-1 rounded bg-sandstone-100 hover:bg-sandstone-200 text-slate-700 transition-colors cursor-pointer">
+                Copy
+              </button>
+            </div>
+            <p class="text-xs text-slate-500 pl-7">
+              Direct email setup for university employer verification and practitioner correspondence.
+            </p>
+          </div>
+          <p id="copyFeedback" class="text-xs text-sage-700 font-medium hidden">Email copied to clipboard.</p>
+        </div>
+
+        <!-- Right Contact Form -->
+        <div class="lg:col-span-3 bg-white p-6 sm:p-8 rounded-2xl border border-sandstone-200 shadow-sm">
+          <form id="inquiryForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="fullName" class="block text-xs font-medium text-slate-700 mb-1.5">Full Name</label>
+                <input type="text" id="fullName" required placeholder="e.g., Rachel Tan" class="w-full px-3.5 py-2.5 rounded-lg border border-sandstone-200 bg-sandstone-50/50 text-sm focus:outline-none focus:border-sage-700 focus:bg-white">
+              </div>
+              <div>
+                <label for="emailAddress" class="block text-xs font-medium text-slate-700 mb-1.5">Email Address</label>
+                <input type="email" id="emailAddress" required placeholder="name@example.com" class="w-full px-3.5 py-2.5 rounded-lg border border-sandstone-200 bg-sandstone-50/50 text-sm focus:outline-none focus:border-sage-700 focus:bg-white">
+              </div>
+            </div>
+
+            <div>
+              <label for="inquiryType" class="block text-xs font-medium text-slate-700 mb-1.5">Inquiry Category</label>
+              <select id="inquiryType" class="w-full px-3.5 py-2.5 rounded-lg border border-sandstone-200 bg-sandstone-50/50 text-sm focus:outline-none focus:border-sage-700 focus:bg-white">
+                <option value="Application: Part-Time Research & Outreach Assistant">Application: Part-Time Research &amp; Outreach Assistant (Psychology / Behavioural Science)</option>
+                <option value="Clinical / Coaching Advisory & Discovery">Clinical / Coaching Advisory &amp; Discovery</option>
+                <option value="University Career Services / Employer Verification">University Career Services / Employer Verification</option>
+                <option value="General Partnership Inquiry">General Partnership Inquiry</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="messageNote" class="block text-xs font-medium text-slate-700 mb-1.5">Message / Background Note</label>
+              <textarea id="messageNote" rows="3" required placeholder="Briefly share your background, university/major (if applying), or practice focus..." class="w-full px-3.5 py-2.5 rounded-lg border border-sandstone-200 bg-sandstone-50/50 text-sm focus:outline-none focus:border-sage-700 focus:bg-white"></textarea>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-3">
+              <button type="submit" class="w-full sm:w-auto px-6 py-2.5 rounded-lg bg-sage-700 text-white text-sm font-medium hover:bg-sage-800 transition-colors cursor-pointer">
+                Compose Email to kinikbt@proton.me
+              </button>
+            </div>
+          </form>
+
+          <!-- Confirmation Message Box (Replaces alert()) -->
+          <div id="formConfirmation" class="hidden mt-4 p-4 rounded-xl bg-sage-50 border border-sage-100 text-sm text-sage-800">
+            <p class="font-semibold mb-1">Opening your email client addressed to kinikbt@proton.me.</p>
+            <p class="text-xs text-sage-700">If your email app did not launch automatically, please send your message directly to <a href="mailto:kinikbt@proton.me" class="underline font-medium">kinikbt@proton.me</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (Structured for Employer & PDPA Verification) -->
+  <footer class="bg-white border-t border-sandstone-200 py-10 px-4 sm:px-6 lg:px-8 text-xs text-slate-600">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+      <div class="space-y-2.5">
+        <!-- Footer Logo Lockup -->
+        <a href="#" class="inline-block focus:outline-none" aria-label="Kinik Behavioural Tech">
+          <svg class="h-10 w-auto" viewBox="0 0 262 92" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="footerLogoTitle">
+            <title id="footerLogoTitle">Kinik Behavioural Tech</title>
+            <g stroke="#2C4C3B" stroke-width="5.2" stroke-linecap="square" stroke-linejoin="miter">
+              <!-- Left 'K' -->
+              <line x1="34" y1="12" x2="34" y2="54"/>
+              <polyline points="62,12 37,33 63,54"/>
+              <!-- First 'I' -->
+              <line x1="87" y1="12" x2="87" y2="54"/>
+              <!-- Solid Clean 'N' -->
+              <polyline points="113,54 113,12 147,54 147,12"/>
+              <!-- Second 'I' -->
+              <line x1="173" y1="12" x2="173" y2="54"/>
+              <!-- Mirrored Right 'K' -->
+              <line x1="227" y1="12" x2="227" y2="54"/>
+              <polyline points="199,12 224,33 198,54"/>
+            </g>
+            <text x="130.5" y="77" text-anchor="middle" fill="#4A4F55" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11.2" font-weight="600" letter-spacing="4.6">BEHAVIOURAL TECH</text>
+          </svg>
+        </a>
+        <p>Early-Stage Behavioural Wellness &amp; Communication Research · Singapore</p>
+        <p class="text-slate-500 max-w-xl">
+          PDPA Notice: Committed to Singapore Personal Data Protection Act (PDPA) standards. Information submitted through this website is used strictly for recruitment verification and practitioner inquiries.
+        </p>
+      </div>
+      <div class="sm:text-right space-y-1 flex-shrink-0">
+        <p class="font-medium text-sage-700"><a href="mailto:kinikbt@proton.me" class="hover:underline">kinikbt@proton.me</a></p>
+        <p class="text-slate-500">&copy; 2026 Kinik Behavioural Tech. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Scripts -->
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Smoothly jump to contact form and pre-select Student Role Application
+    function openRoleModal() {
+      const selectEl = document.getElementById('inquiryType');
+      selectEl.value = 'Application: Part-Time Research & Outreach Assistant';
+      const noteEl = document.getElementById('messageNote');
+      if (!noteEl.value.trim()) {
+        noteEl.value = 'Application for Part-Time Research & Outreach Assistant (Psychology / Behavioural Science): ';
+      }
+      const contactSection = document.getElementById('contact');
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => {
+        document.getElementById('fullName').focus();
+      }, 500);
+    }
+
+    // Copy email using execCommand fallback for cross-iframe compatibility
+    function copyEmail() {
+      const emailText = document.getElementById('contactEmailText').innerText;
+      const tempInput = document.createElement('input');
+      tempInput.value = emailText;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+
+      const feedback = document.getElementById('copyFeedback');
+      feedback.classList.remove('hidden');
+      setTimeout(() => {
+        feedback.classList.add('hidden');
+      }, 2500);
+    }
+
+    // Handle contact form submission by composing a pre-filled mailto to kinikbt@proton.me
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById('fullName').value.trim();
+      const senderEmail = document.getElementById('emailAddress').value.trim();
+      const category = document.getElementById('inquiryType').value;
+      const message = document.getElementById('messageNote').value.trim();
+
+      const subject = encodeURIComponent(`[Kinik Behavioural Tech] ${category} - ${name}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\nReply Email: ${senderEmail}\nCategory: ${category}\n\nMessage:\n${message}`
+      );
+
+      const confirmation = document.getElementById('formConfirmation');
+      confirmation.classList.remove('hidden');
+
+      window.location.href = `mailto:kinikbt@proton.me?subject=${subject}&body=${body}`;
+    }
+  </script>
+</body>
+</html>
