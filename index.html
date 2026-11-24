@@ -383,15 +383,15 @@
 
             <div class="flex flex-wrap items-center gap-3">
               <button type="submit" class="w-full sm:w-auto px-6 py-2.5 rounded-lg bg-sage-700 text-white text-sm font-medium hover:bg-sage-800 transition-colors cursor-pointer">
-                Compose Email to kinikbt@proton.me
+                Compose Email to hello@kinik.life
               </button>
             </div>
           </form>
 
           <!-- Confirmation Message Box (Replaces alert()) -->
           <div id="formConfirmation" class="hidden mt-4 p-4 rounded-xl bg-sage-50 border border-sage-100 text-sm text-sage-800">
-            <p class="font-semibold mb-1">Opening your email client addressed to kinikbt@proton.me.</p>
-            <p class="text-xs text-sage-700">If your email app did not launch automatically, please send your message directly to <a href="mailto:kinikbt@proton.me" class="underline font-medium">kinikbt@proton.me</a>.</p>
+            <p class="font-semibold mb-1">Opening your email client addressed to hello@kinik.life.</p>
+            <p class="text-xs text-sage-700">If your email app did not launch automatically, please send your message directly to <a href="mailto:hello@kinik.life" class="underline font-medium">hello@kinik.life</a>.</p>
           </div>
         </div>
       </div>
@@ -429,7 +429,7 @@
         </p>
       </div>
       <div class="sm:text-right space-y-1 flex-shrink-0">
-        <p class="font-medium text-sage-700"><a href="mailto:kinikbt@proton.me" class="hover:underline">kinikbt@proton.me</a></p>
+        <p class="font-medium text-sage-700"><a href="mailto:hello@kinik.life" class="hover:underline">hello@kinik.life</a></p>
         <p class="text-slate-500">&copy; 2026 Kinik Behavioural Tech. All rights reserved.</p>
       </div>
     </div>
@@ -476,7 +476,7 @@
       }, 2500);
     }
 
-    // Handle contact form submission by composing a pre-filled mailto to kinikbt@proton.me
+    // Handle contact form submission by composing a pre-filled mailto to hello@kinik.life
     function handleFormSubmit(event) {
       event.preventDefault();
       const name = document.getElementById('fullName').value.trim();
@@ -492,7 +492,7 @@
       const confirmation = document.getElementById('formConfirmation');
       confirmation.classList.remove('hidden');
 
-      window.location.href = `mailto:kinikbt@proton.me?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:hello@kinik.life?subject=${subject}&body=${body}`;
     }
   </script>
 </body>
